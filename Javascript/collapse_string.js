@@ -12,17 +12,14 @@ collapseString('hello   app academy'); //=> 'helo ap academy'
 
 function collapseString(str) {
 	var newWords = '';
-	
+
   for (var i = 0; i < str.length; i += 1) {
     var char = str[i];
-		
+
 		if (char !== newWords[newWords.length - 1]) {
 			newWords += char;
 		}
 	}
-	
+
 	return newWords;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = collapseString;

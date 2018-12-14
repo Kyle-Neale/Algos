@@ -24,6 +24,3 @@ function signFlipCount(numbers) {
 	}
 	return counter;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = signFlipCount;

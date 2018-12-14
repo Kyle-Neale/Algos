@@ -21,6 +21,3 @@ function countAdjacentSums(arr, n) {
 	}
 	return counter;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = countAdjacentSums;
