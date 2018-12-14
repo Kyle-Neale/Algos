@@ -18,6 +18,3 @@ function avgValue(array) {
 	}
 	return sum / array.length;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = avgValue;

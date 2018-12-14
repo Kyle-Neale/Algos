@@ -85,10 +85,3 @@ function sumOfNPrimes(n) {
 	}
 	return sum;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = {
-  isPrime: isPrime,
-  firstNPrimes: firstNPrimes,
-  sumOfNPrimes: sumOfNPrimes
-};

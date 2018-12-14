@@ -47,6 +47,3 @@ function countScores(people) {
   }
   return scores;
 }
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = countScores;
