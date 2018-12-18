@@ -39,4 +39,10 @@ function nSteps(n, row = 0, stair = '') {
     console.log(stair);
     return nSteps(n, row + 1);
   }
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  nSteps(n, row, stair);
 }
