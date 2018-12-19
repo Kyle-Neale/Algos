@@ -38,7 +38,7 @@ function nPyramid(n) {
 
 // Alternate Solution
 function nPyramid(n) {
-  let midpoint = Math.floor((2 * n - 1)/ 2);
+  const midpoint = Math.floor((2 * n - 1)/ 2);
   for (var row = 0; row < n; row++) {
     let level = '';
     for (var column = 0; column < 2 * n - 1; column++) {
@@ -54,6 +54,20 @@ function nPyramid(n) {
 
 
 //Recursive Solution
-function nPyramid(n) {
+function nPyramid(n, row = 0, level = '') {
+  const midpoint = Math.floor((2 * n - 1)/ 2);
 
+  if (n === row) {
+    return;
+  }
+  if (level.length === n + n - 1) {
+    console.log(level);
+    return nPyramid(n, row + 1);
+  }
+  if (midpoint - row <= level.length && midpoint + row >= level.length) {
+    level += '#';
+  } else {
+    level += ' ';
+  }
+  nPyramid(n, row, level);
 }
