@@ -17,22 +17,22 @@ Example:
 
 function nPyramid(n) {
   for (var row = 0; row < n; row++) {
-    let stair = '';
+    let level = '';
     for (var rCol = 0; rCol < n; rCol++) {
       if (rCol <= row) {
-        stair += '#';
+        level += '#';
       } else {
-        stair += ' ';
+        level += ' ';
       }
     }
     for (var lCol = 1; lCol < n; lCol++) {
       if (lCol <= row) {
-        stair = '#' + stair;
+        level = '#' + level;
       } else {
-        stair = ' ' + stair;
+        level = ' ' + level;
       }
     }
-    console.log(stair);
+    console.log(level);
   }
 }
 
