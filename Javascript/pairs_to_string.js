@@ -23,10 +23,10 @@ pairsToString(array2); // => 'food!'
 ***********************************************************************/
 
 function pairsToString(arr) {
-	var newString = ''
-	for (var i = 0; i < arr.length; i++) {
-		var subArray= arr[i];
-		for (var j = 0; j < subArray[1]; j++) {
+	let newString = ''
+	for (let i = 0; i < arr.length; i++) {
+		let subArray= arr[i];
+		for (let j = 0; j < subArray[1]; j++) {
 			newString += subArray[0];
 		}
 	}

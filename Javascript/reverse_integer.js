@@ -19,13 +19,12 @@ function reverseInt(num) {
     return reverseNum;
   } else {
     splitNum.shift();
-    reverseNum = parseInt( '-' + splitNum.reverse().join(''))
+    reverseNum = parseInt( '-' + splitNum.reverse().join(''));
     return reverseNum;
   }
 }
 
 // Refactored code
-
 function reverseInt(num) {
   return parseInt(num.toString().split('').reverse().join('')) * Math.sign(num)
 }

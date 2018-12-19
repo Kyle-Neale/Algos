@@ -5,7 +5,7 @@ of the word is shifted `num` times in the alphabet.
 
 Use this alphabet array to help:
 
-var alphabet = [
+let alphabet = [
   'a','b','c','d','e','f','g','h','i','j','k','l','m',
   'n','o','p','q','r','s','t','u','v','w','x','y','z'
 ];
@@ -18,16 +18,16 @@ shiftChars('bootcamp', 3); //=> 'errwfdps'
 shiftChars('zebra', 5); //=> 'ejgwf'
 ***********************************************************************/
 
-var alphabet = [
+let alphabet = [
   'a','b','c','d','e','f','g','h','i','j','k','l','m',
   'n','o','p','q','r','s','t','u','v','w','x','y','z'
 ];
 
 function shiftChars(word, num) {
-	var newWord = '';
-	for (var i = 0; i < word.length; i++) {
-		var char = word[i];
-		var alphabetIndex = alphabet.indexOf(char);
+	let newWord = '';
+	for (let i = 0; i < word.length; i++) {
+		let char = word[i];
+		let alphabetIndex = alphabet.indexOf(char);
 
 		if (alphabetIndex !== -1) {
 			newWord += alphabet[(alphabetIndex + num) % alphabet.length]

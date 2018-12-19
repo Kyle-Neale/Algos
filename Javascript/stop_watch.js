@@ -21,10 +21,10 @@ stopWatch(99999); // => '27:46:39'
 ***********************************************************************/
 
 function stopWatch(totalSeconds) {
-	var seconds = totalSeconds % 60;
-	var minutes = Math.floor(totalSeconds / 60);
-	var hours = Math.floor(totalSeconds / 3600);
-	var timeFormat = showDoubleDigits(hours) + ':' + showDoubleDigits(minutes) + ':' + seconds;
+	let seconds = totalSeconds % 60;
+	let minutes = Math.floor(totalSeconds / 60);
+	let hours = Math.floor(totalSeconds / 3600);
+	let timeFormat = showDoubleDigits(hours) + ':' + showDoubleDigits(minutes) + ':' + seconds;
 	return timeFormat;
 }
 

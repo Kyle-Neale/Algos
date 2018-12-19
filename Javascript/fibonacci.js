@@ -28,12 +28,10 @@ function fibonacci(n) {
 	} else if (n === 2) {
 		return [1, 1];
 	}
-
-	var fibArr = [1, 1];
+	let fibArr = [1, 1];
 	while (fibArr.length < n) {
-		var nextNum = fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2];
-		fibArr.push(nextNum)
-
+		let nextNum = fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2];
+		fibArr.push(nextNum);
 	}
 	return fibArr;
 }

@@ -14,10 +14,10 @@ signFlipCount([-1, 11.3, -3, 100]); //=> 3
 ***********************************************************************/
 
 function signFlipCount(numbers) {
-	var counter = 0;
-	for (var i = 0; i < numbers.length; i++) {
-		var num = numbers[i];
-		var nextNum = numbers[i + 1];
+	let counter = 0;
+	for (let i = 0; i < numbers.length; i++) {
+		let num = numbers[i];
+		let nextNum = numbers[i + 1];
 		if (num * nextNum < 0) {
 			counter += 1;
 		}
