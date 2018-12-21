@@ -34,18 +34,17 @@ function fibonacci(n) {
 
 // Recursive Solution:
 function fibonacci(n) {
-	if (n === 0) {
-		return [];
-	} else if (n === 1) {
-		return [1];
-	} else if (n === 2) {
-		return [1, 1];
-	}
+	if (n == 0) {
+    return [0];
+  }
+  if (n === 1) {
+    return [1]
+  }
+  if (n === 2) {
+    return [1, 1]
+  }
+  let fibArr = fibonacci(n - 1);
+  fibArr.push(fibArr[n - 3] + fibArr[n - 2]);
 
-	let fibArr = [1, 1];
-	while (fibArr.length < n) {
-		let nextNum = fibonacci(n - 1) + fibonacci(n - 2);
-		fibArr.push(nextNum);
-	}
-	fibonacci(n - 1);
+  return fibArr;
 }
