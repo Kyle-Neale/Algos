@@ -7,9 +7,6 @@ The first two numbers of the fibonacci sequence are 1 and 1. The next
 number in the sequence can be found by adding the last two numbers in
 the sequence.
 
-Solve this without recursion.
-If you don't know what recursion is, we'll see it tomorrow!
-
 Examples:
 
 fibonacci(0); // => []
@@ -34,4 +31,23 @@ function fibonacci(n) {
 		fibArr.push(nextNum);
 	}
 	return fibArr;
+}
+
+// Recursive Solution:
+
+function fibonacci(n) {
+	if (n === 0) {
+		return [];
+	} else if (n === 1) {
+		return [1];
+	} else if (n === 2) {
+		return [1, 1];
+	}
+
+	let fibArr = [1, 1];
+	while (fibArr.length < n) {
+		let nextNum = fibonacci(n - 1) + fibonacci(n - 2);
+		fibArr.push(nextNum);
+	}
+	fibonacci(n - 1);
 }
