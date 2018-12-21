@@ -46,7 +46,7 @@ const sMatrix = (n) => {
       counter++;
     }
     endRow--;
-    // Everything else.
+    // Responsible for left column
     for (let i = endRow; i >= startRow; i--) {
       mainArr[i][startCol] = counter;
       counter++
