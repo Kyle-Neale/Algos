@@ -38,13 +38,27 @@ function fibonacci(n) {
     return [0];
   }
   if (n === 1) {
-    return [1]
+    return [1];
   }
   if (n === 2) {
-    return [1, 1]
+    return [1, 1];
   }
   let fibArr = fibonacci(n - 1);
   fibArr.push(fibArr[n - 3] + fibArr[n - 2]);
 
   return fibArr;
+}
+
+// Memoization Solution
+function memoize(fn) {
+	let cache = {};
+	return function(...args) {
+		if (cache[args]) {
+			return cache[args];
+		}
+		const result = fn.apply(this, args);
+		cache[args] = result
+
+		return result;
+	}
 }
