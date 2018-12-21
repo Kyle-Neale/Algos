@@ -56,7 +56,6 @@ function nPyramid(n) {
 //Recursive Solution
 function nPyramid(n, row = 0, level = '') {
   const midpoint = Math.floor((2 * n - 1)/ 2);
-
   if (n === row) {
     return;
   }
