@@ -34,6 +34,10 @@ class Queue {
 
   peek() {
     let copyArr = this.data.slice(0);
-    return copyArr[-1];
+    return copyArr[copyArr.length - 1];
   }
+}
+
+function weave(sourceOne, sourceTwo) {
+
 }
