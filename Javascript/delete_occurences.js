@@ -8,7 +8,7 @@ would lead to 1 and 2 being in the result 3 times, and then take 3, which leads 
 Example
   deleteNth ([1,1,1,1],2) // return [1,1]
   deleteNth ([20,37,20,21],1) // return [20,37,21]
-************************************************************************************/
+**********************************************************************************/
 
 function deleteNth(arr,n){
   // I want to push each element into a new array N times.
