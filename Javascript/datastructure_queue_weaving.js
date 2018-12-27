@@ -33,21 +33,20 @@ class Queue {
   }
 
   peek() {
-    let copyArr = this.data.slice(0);
-    return copyArr[copyArr.length - 1];
+    return this.data[this.data.length - 1];
   }
 }
 
 function weave(sourceOne, sourceTwo) {
-  const q = new Queue()
+  const queue = new Queue()
   while (sourceOne.peek() || sourceTwo.peek()) {
     if (sourceOne.peek()) {
-      q.add(sourceOne.remove());
+      queue.add(sourceOne.remove());
     }
     if (sourceTwo.peek()) {
-      q.add(sourceTwo.remove());
+      queue.add(sourceTwo.remove());
     }
   }
 
-  return q;
+  return queue;
 }
