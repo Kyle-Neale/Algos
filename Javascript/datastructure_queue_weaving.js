@@ -6,12 +6,11 @@ function should be able to handle queues of different lengths without inserting
 
 Example
   const queueOne = new Queue();
-
     queueOne.add(1) // => [1];
     queueOne.add(2) // => [2, 1];
   const queueTwo = new Queue();
-    queueTwo.add() // => ['Hi'];
-    queueTwo.add() // => ['there', 'Hi'];
+    queueTwo.add('Hi') // => ['Hi'];
+    queueTwo.add('there') // => ['there', 'Hi'];
   const q = new Queue()
     q.remove() // => 'there'
     q.remove() // => 'Hi'
@@ -47,6 +46,5 @@ function weave(sourceOne, sourceTwo) {
       queue.add(sourceTwo.remove());
     }
   }
-
   return queue;
 }
