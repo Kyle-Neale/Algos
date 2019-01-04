@@ -49,7 +49,6 @@ class Queue {
     while (this.secondStack.peek()) {
       this.first.push(this.second.pop())
     }
-    
     return record;
   }
 
