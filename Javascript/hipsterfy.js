@@ -26,6 +26,7 @@ function hipsterfy(sentence) {
   return newWords.join(' ');
 }
 
+// Helper function
 function hipsterfyWord(word) {
   var newWord = '';
   var vowels = 'aeiou';
