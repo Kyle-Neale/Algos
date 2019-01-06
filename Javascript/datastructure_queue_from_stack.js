@@ -40,11 +40,24 @@ class Queue {
   }
 
   remove() {
-    while (this.firstStack.speek()) {
+    while (this.firstStack.peek()) {
       this.secondStack.push(this.first.pop());
     }
 
     const record = this.second.pop();
+
+    while (this.secondStack.peek()) {
+      this.first.push(this.second.pop())
+    }
+    return record;
+  }
+
+  peek() {
+    while (this.firstStack.peek()) {
+      this.secondStack.push(this.first.pop());
+    }
+
+    const record = this.second.peek();
 
     while (this.secondStack.peek()) {
       this.first.push(this.second.pop())
