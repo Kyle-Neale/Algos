@@ -17,14 +17,22 @@ class LinkedList {
   }
 
   insertFirst(data) {
-    if (!this.head) {
-      const node = new Node(data);
-      this.head = node;
+    this.head = new Node(data, this.head);
+  }
 
+  size() {
+    if (!this.head) {
+      return 0;
+    } else if (!this.head.next) {
+      return 1;
     } else {
-      const node = new Node(data, this.head);
-      this.head = node;
+      let counter = 1;
+      let node = this.head.next
+      while (node) {
+        node = node.next;
+        counter++;
+      }
+      return counter;
     }
-    return;
   }
 }
