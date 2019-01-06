@@ -12,8 +12,8 @@ class Node {
 }
 
 class LinkedList {
-  constructor(head = null) {
-    this.head = head;
+  constructor() {
+    this.head = null;
   }
 
   insertFirst(data) {
@@ -21,18 +21,34 @@ class LinkedList {
   }
 
   size() {
-    if (!this.head) {
-      return 0;
-    } else if (!this.head.next) {
-      return 1;
-    } else {
-      let counter = 1;
-      let node = this.head.next
-      while (node) {
-        node = node.next;
-        counter++;
-      }
-      return counter;
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      counter++;
+      node = node.next;
     }
+
+    return counter;
+  }
+
+  getFirst() {
+    return this.head;
+  }
+
+  getLast() {
+    let node = this.head;
+    if (!node) {
+      return null;
+    }
+
+    while (node.next) {
+      node = node.next
+    }
+    return node
+  }
+
+  clear() {
+    this.head = null;
+    return this.head;
   }
 }
