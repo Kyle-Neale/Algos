@@ -81,16 +81,40 @@ class LinkedList {
     }
   }
 
-  getAt(int) {
+  getAt(index) {
     let counter = 0;
     let node = this.head;
 
     while (node) {
-      if (counter === int) {
+      if (counter === index) {
         return node;
       }
       counter++
       node = node.next;
+    }
+    return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) {
+      return null;
+    } else if (index === 0) {
+      this.head = this.head.next;
+    }
+
+    let counter = 0 - 1;
+    let previous = this.head;
+    let node = previous.next;
+    let next = node.next;
+
+    while (node) {
+      if (counter === index) {
+        previous.next = next
+      }
+      counter++
+      previous = node;
+      node = next;
+      next = node.next;
     }
     return null;
   }
