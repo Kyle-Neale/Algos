@@ -122,14 +122,16 @@ class LinkedList {
     previous.next = node
   }
 
-  forEach(cb) {
+  forEach(fn) {
     if (!this.head) {
       return null;
     }
     let node = this.head;
+    let counter = 0;
     while (node) {
-      node.data = cb(node.data);
+      node.data = fn(node.data, counter);
       node = node.next
+      counter++;
     }
   }
 }
