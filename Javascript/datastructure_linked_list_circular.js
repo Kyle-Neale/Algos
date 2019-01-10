@@ -23,7 +23,7 @@ const circular = (list) => {
       return true;
     }
     slow = slow.next;
-    fast = fast.next.next
+    fast = fast.next.next;
   }
   return false;
 }
