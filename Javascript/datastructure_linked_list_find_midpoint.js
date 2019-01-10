@@ -14,8 +14,8 @@ Example:
 *******************************************************************************/
 
 function midpoint(list) {
-  let slow = this.getFirst();
-  let fast = slow.next;
+  let slow = list.getFirst();
+  let fast =list.getFirst();
 
   while (fast.next && fast.next.next) {
     slow = slow.next
