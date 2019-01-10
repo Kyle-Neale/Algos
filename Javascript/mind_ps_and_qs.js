@@ -17,8 +17,6 @@ mindPsAndQs('APCDQQPPC'); // => 4
 mindPsAndQs('PQPQ'); // => 4
 mindPsAndQs('PPPXQPPPQ'); // => 5
 ***********************************************************************/
-
-
 function mindPsAndQs(str) {
 	var currentCount = 0;
 	var longestCount = 0;
