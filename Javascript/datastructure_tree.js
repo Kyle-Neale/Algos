@@ -31,14 +31,31 @@ class Tree {
     if (!this.root) {
       return;
     }
+
     const array = [this.root];
-    while (array.length !== 0) {
-      let node = array.shift();
+    while (array.length) {
+      const node = array.shift();
       if (node.children) {
         array.push(...node.children)
       }
 
       fn(node);
+    }
+  }
+
+  depthSearch(fn) {
+    if (!this.root) {
+      return;
+    }
+
+    const array = [this.root];
+    while (array.length) {
+      const node = array.shift();
+      if (node.children) {
+        array.unshift(...node.children);
+      }
+
+      fn(node)
     }
   }
 }
