@@ -26,4 +26,19 @@ class Tree {
   constructor() {
     this.root = null;
   }
+
+  breadthSearch(fn) {
+    if (!this.root) {
+      return;
+    }
+    const array = [this.root];
+    while (array.length !== 0) {
+      let node = array.shift();
+      if (node.children) {
+        array.push(...node.children)
+      }
+
+      fn(node);
+    }
+  }
 }
