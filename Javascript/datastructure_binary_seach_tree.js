@@ -35,7 +35,7 @@ class Node {
 
   contains(data) {
     if (this.data === data) {
-      return data;
+      return this;
     }
     if (this.data < data && this.right) {
       return this.right.contains(data);
