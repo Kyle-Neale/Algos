@@ -39,7 +39,3 @@ function removeVowels(word) {
 	}
 	return newWord;
 }
-
-abbreviate('bootcamp prep is fun'); // => 'btcmp prep is fun'
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = abbreviate;
