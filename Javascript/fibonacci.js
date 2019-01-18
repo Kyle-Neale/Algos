@@ -29,10 +29,10 @@ function fibonacci(n) {
 		let nextNum = fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2];
 		fibArr.push(nextNum);
 	}
-	return fibArr;
+	return fibArr[n];
 }
 
-// Recursive Solution:
+// Recursive Solution: pushing into an array
 function fibonacci(n) {
 	if (n == 0) {
     return [0];
