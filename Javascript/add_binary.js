@@ -1,3 +1,12 @@
+/******************************************************************************
+Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
+
+Examples:
+  addBinary("11", "1") // => "100"
+  addBinary("1010", "1011") // => "10101"
+******************************************************************************/
+
 
 var addBinary = function(A, B) {
     let sum = '';
