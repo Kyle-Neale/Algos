@@ -22,7 +22,6 @@ function canJump(nums) {
     let maxReachableIndex = nums[0];
     for (let i = 1; i < nums.length; ++i) {
         if (maxReachableIndex < i) {
-            console.log(maxReachableIndex < i, i)
             return false;
         }
         maxReachableIndex = Math.max(maxReachableIndex, i + nums[i]);
