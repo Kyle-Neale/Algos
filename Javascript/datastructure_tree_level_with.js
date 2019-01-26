@@ -12,7 +12,6 @@ Example:
 Answer: [1, 3, 2]
 
 *******************************************************************************/
-
 const levelWidth = (root) => {
   const arr = [root, 'stop'];
   const widths = [0];
