@@ -7,7 +7,7 @@ Examples:
   addBinary("1010", "1011") // => "10101"
 ******************************************************************************/
 
-var addBinary = function(A, B) {
+const addBinary = (A, B) => {
     let sum = '';
     let carry = 0;
     let i = A.length - 1;
